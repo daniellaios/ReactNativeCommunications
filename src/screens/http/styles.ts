@@ -11,11 +11,16 @@ export default StyleSheet.create({
     borderColor: 'gray',
     padding: 10,
     marginBottom: 20,
+    color: 'black',
+    borderRadius: 20,
   },
   responseContainer: {
     marginTop: 20,
     padding: 10,
     backgroundColor: '#f0f0f0',
     height: 200,
+  },
+  responseText: {
+    color: 'black',
   },
 });

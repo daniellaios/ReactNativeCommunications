@@ -14,7 +14,6 @@ import Network from '../../components/network/Network';
 import styles from './styles';
 import Button from '../../components/button/Button';
 import NetInfo from '../../components/netinfo/NetInfo';
-import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen: React.FC = () => {
@@ -62,17 +61,7 @@ const HomeScreen: React.FC = () => {
     }
   };
 
-  const makeHttpCall = async () => {
-    try {
-      const response = await axios.get('http://192.168.1.130:3000');
-      console.log('resp', response);
-    } catch (error) {
-      console.log('err', error);
-    }
-  };
-
   useEffect(() => {
-    makeHttpCall();
     if (wifiList.length == 0) {
       getNetworks(WifiManager.loadWifiList);
     }

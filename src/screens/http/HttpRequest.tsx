@@ -40,7 +40,7 @@ const FetchScreen: React.FC = () => {
         disabled={loading}
       />
       <ScrollView style={styles.responseContainer}>
-        <Text>{responseText}</Text>
+        <Text style={styles.responseText} >{responseText}</Text>
       </ScrollView>
     </SafeAreaView>
   );
